@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'delius';
+    src: url('Delius-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chewy';
+    src: url('Chewy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    --bg-color: #F2EFE7;
+    --accent1-color: #9ACBD0;
+    --accent2-color: #48A6A7;
+    --accent3-color: #006A71;
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'delius', Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--accent2-color);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent3-color);
+}
+.main {
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    margin: auto;
+}
+#reader {
+    border-radius: 2rem;
+    background-color: var(--accent1-color);
+    padding: 3rem !important;
+    border: none !important;
+}
+#reader > div:first-child {
+    display: none !important;
+}
+#reader__scan_region img {
+    margin: 0 auto;
+}
+#reader button {
+    border-radius: 1rem;
+    background-color: var(--accent2-color);
+    color: var(--bg-color);
+    border: 1px solid var(--accent3-color);
+    padding: 0 1rem;
+    cursor: pointer;
+}
+#result {
+    font-family: 'chewy', 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+.hidden {
+    display: none;
+}
+.curve-erratic {
+	/* Uncomment as needed. */
+	/* width: 100px; */
+	/* height: 100px; */
+	/* background-color: deeppink; */
+	animation-name: curve-erratic;
+	animation-duration: 5s;
+	animation-iteration-count: 5;
+}
+				
+@keyframes curve-erratic {
+	0% {  transform: scale(1,1) translate(0%, 0%); }
+	5% {  transform: scale(0.8, 0.8) translate(60%, 50%); }
+	15% {  transform: scale(0.8, 0.8) translate(30%, 60%); }
+	40% {  transform: scale(0, 0) translate(-250%, 250%); }
+	70% {  transform: scale(0, 0) translate(250%, 250%); }
+	85% {  transform: scale(0.8, 0.8) translate(60%, 50%); }
+	95% {  transform: scale(0.8, 0.8) translate(30%, 60%); }
+	100% {  transform: scale(1, 1) translate(0%, 0%); }
+}
+
+.sling {
+	/* Uncomment as needed. */
+	/* width: 100px; */
+	/* height: 100px; */
+	/* background-color: deeppink; */
+	animation-name: sling;
+	animation-duration: 3s;
+	animation-iteration-count: 5;
+}
+			
+@keyframes sling {
+	0% {  transform: scale(1,1) translate(0%, 50%); }
+	5% {  transform: scale(.75, .75) translate(50%, -25%); }
+	10% {  transform: scale(.5, .5) translate(100%, -50%); }
+	15% {  transform: scale(.4, .4) translate(0%, -50%); }
+	20% {  transform: scale(.6, .6) translate(-50%, -50%); }
+	25% {  transform: scale(.75, .75) translate(-100%, -25%); }
+	35% {  transform: scale(.8, .8) translate(0%, 0%); }
+	
+	35% {  transform: scale(1, 1) translate(100%, 25%); }
+	40% {  transform: scale(.1, .1) translate(370%, 0); }
+	100% {  transform: scale(.0, .0) translate(500%, 0); }
+}
+
+.spin-horizontal {
+	/* Uncomment as needed. */
+	/* width: 100px; */
+	/* height: 100px; */
+	/* background-color: deeppink; */
+	animation-name: spin-horizontal-3d;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;	
+}
+			
+@keyframes spin-horizontal-3d {
+	0% {  transform: scale(1,1) translate(-100px, 0); }
+	5% {  transform: scale(0.9, 1) translate(-15px, 0); }
+	5.5% {  transform: scale(1, 1) translate(-0px, 0); }
+	50% {  transform: scale(0, 0) translate(300px, 30px); }
+	51% {  transform: scale(0, 0) translate(-300px, 0); }	
+}
+
+.helix-in-z-direction {
+	/* Uncomment as needed. */
+	/* width: 100px; */
+	/* height: 100px; */
+	/* background-color: deeppink; */
+	animation-name: helix-in-z-direction;
+	
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+			
+@keyframes helix-in-z-direction {
+	0% {    transform: translate(0, -50%); }
+	6.25% { transform: translate(19%, -46%) scale(0.9375, 0.9375); }
+	12.5% { transform: translate(35.35%, -35.35%) scale(0.875, 0.875); }
+	18.25% { transform: translate(46%, -19%) scale(0.8125, 0.8125); } 
+	25% {   transform: translate(50%, 0) scale(0.75, 0.75); }
+	31.25% { transform: translate(46%, 19%) scale(0.6875, 0.6875); }
+	37.5% { transform: translate(35.35%, 35.35) scale(0.625 , 0.625); }
+	43.75% { transform: translate(19%, 46%) scale(0.5625 , 0.5625); }
+	50% {   transform: translate(0, 50%) scale(0.5 , 0.5); }
+	
+	56.25% { transform: translate(-19%, 46%) scale(0.4375 , 0.4375); }
+	62.5% { transform: translate(-35.35, 35.35%) scale(0.375 , 0.375); }
+	68.75% { transform: translate(-46%, 19%) scale(0.3125 , 0.3125); }
+	75% {   transform: translate(-50%, 0) scale(0.25 , 0.25); }
+	81.25% { transform: translate(-46%, -19%) scale(0.1875 , 0.1875); }
+	87.5% { transform: translate(-35.35%, -35.35%) scale(0.125 , 0.125); }
+	93.75% { transform: translate(-19%, -46%) scale(0.0625 , 0.0625); }
+	100% {  transform: translate(0, -50%) scale(0.0625 , 0.0625); }
+
+}
