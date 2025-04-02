@@ -1,0 +1,2 @@
+# qrcode-scanner
+QRCode Scanner
